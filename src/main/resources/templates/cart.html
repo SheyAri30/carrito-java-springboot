@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda Online</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .producto { border: 1px solid #ccc; padding: 15px; margin: 10px; }
+        button { background: green; color: white; padding: 10px; border: none; cursor: pointer; }
+        .error { background: #ffcccc; padding: 10px; margin: 10px 0; }
+        .success { background: #ccffcc; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+<h1>🛒 Mi Tienda Online</h1>
+
+<nav>
+    <a href="/home">Inicio</a> |
+    <a href="/cart">Carrito (<span th:text="${cartItemCount}">0</span>)</a>
+</nav>
+
+<hr>
+
+<div th:if="${successMessage}" class="success" th:text="${successMessage}"></div>
+<div th:if="${errorMessage}" class="error" th:text="${errorMessage}"></div>
+
+<h2>Productos Disponibles</h2>
+
+<div th:if="${products != null and !products.isEmpty()}">
+    <div class="producto" th:each="p : ${products}">
+        <h3 th:text="${p.nombre}">Producto</h3>
+        <p th:text="${p.descripcion}">Descripcion</p>
+        <p><strong>Precio:</strong> $<span th:text="${p.precio}">0</span></p>
+        <p><strong>Stock:</strong> <span th:text="${p.stock}">0</span></p>
+
+        <form th:action="@{/cart/add}" method="post">
+            <input type="hidden" name="productId" th:value="${p.id}">
+            <input type="number" name="quantity" value="1" min="1" th:max="${p.stock}">
+            <button type="submit">Agregar al Carrito</button>
+        </form>
+    </div>
+</div>
+
+<div th:if="${products == null or products.isEmpty()}">
+    <p>No hay productos disponibles</p>
+</div>
+
+</body>
+</html>

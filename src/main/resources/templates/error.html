@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+    <style>
+        body { font-family: Arial; padding: 20px; text-align: center; }
+        .error-box { background: #ffcccc; padding: 30px; margin: 20px auto; max-width: 600px; border-radius: 10px; }
+    </style>
+</head>
+<body>
+<div class="error-box">
+    <h1>⚠️ ¡Oops! Algo salió mal</h1>
+    <p th:if="${errorMessage}" th:text="${errorMessage}">Ha ocurrido un error</p>
+    <p th:unless="${errorMessage}">Ha ocurrido un error inesperado</p>
+    <br>
+    <a href="/">← Volver al inicio</a>
+</div>
+</body>
+</html>
