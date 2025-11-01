@@ -1,0 +1,9 @@
+/home/sheylaa30/Desktop/carrito/src/main/java/com/carritodecompras/carrito/CarritoApplication.java
+/home/sheylaa30/Desktop/carrito/src/main/java/com/carritodecompras/carrito/ServletInitializer.java
+/home/sheylaa30/Desktop/carrito/src/main/java/com/carritodecompras/carrito/controller/HomeController.java
+/home/sheylaa30/Desktop/carrito/src/main/java/com/carritodecompras/carrito/controller/ShoppingCartController.java
+/home/sheylaa30/Desktop/carrito/src/main/java/com/carritodecompras/carrito/entity/CarritoItem.java
+/home/sheylaa30/Desktop/carrito/src/main/java/com/carritodecompras/carrito/entity/Producto.java
+/home/sheylaa30/Desktop/carrito/src/main/java/com/carritodecompras/carrito/repository/ProductoRepository.java
+/home/sheylaa30/Desktop/carrito/src/main/java/com/carritodecompras/carrito/service/ProductoService.java
+/home/sheylaa30/Desktop/carrito/src/main/java/com/carritodecompras/carrito/service/ShoppingCartService.java
