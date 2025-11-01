@@ -1,9 +1,0 @@
-com/carritodecompras/carrito/repository/ProductoRepository.class
-com/carritodecompras/carrito/ServletInitializer.class
-com/carritodecompras/carrito/controller/ShoppingCartController.class
-com/carritodecompras/carrito/service/ShoppingCartService.class
-com/carritodecompras/carrito/entity/Producto.class
-com/carritodecompras/carrito/controller/HomeController.class
-com/carritodecompras/carrito/entity/CarritoItem.class
-com/carritodecompras/carrito/service/ProductoService.class
-com/carritodecompras/carrito/CarritoApplication.class
